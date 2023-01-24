@@ -40,36 +40,23 @@ public class contact extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		String FirstName = request.getParameter("FirstName");
-		String LName = request.getParameter("LastName");
-		String Email = request.getParameter("EmailID");
-		String mobile = request.getParameter("MobileNumber");
-		String Adress = request.getParameter("Address");
-		String city = request.getParameter("City");
-		String pin = request.getParameter("PinCode");
-		String State = request.getParameter("State");
-		String country = request.getParameter("Country");
-		String hobby = request.getParameter("Hobby");
-		String  Qua= request.getParameter("Qualification");
+		String name = request.getParameter("NAME");
+		String email = request.getParameter("email");
+		String subject = request.getParameter("SUBJECT");
+		String message = request.getParameter("message");
+		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("driver loaded");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gutal", "root", "root");
 
 			System.out.println("connection done");
-			String url = "insert into Registration (FirstName , LastName , EmailID ,  MobileNumber , Address , City , PinCode , State , Country , Hobby , Qualification) values (?,?,?,?,?,?,?,?,?,?,?);";
+			String url = "insert into contact (NAME , email , SUBJECT, message) values (?,?,?,?);";
 			PreparedStatement st = con.prepareStatement(url);
-			st.setString(1, FirstName);
-			st.setString(2, LName);
-			st.setString(3, Email);
-			st.setString(4, mobile);
-			st.setString(5, Adress);
-			st.setString(6, city);
-			st.setString(7, pin);
-			st.setString(8, State);
-			st.setString(9, country);
-			st.setString(10, hobby);
-			st.setString(11, Qua);
+			st.setString(1, name);
+			st.setString(2, email);
+			st.setString(3, subject);
+			st.setString(4, message);
 			
 			st.executeUpdate();
 			System.out.println("executed succefully");
@@ -80,4 +67,5 @@ public class contact extends HttpServlet {
 
 	}
 
+}
 }
