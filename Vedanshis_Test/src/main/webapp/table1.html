@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Home page</title>
+ <style>
+ 
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 30px auto;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    .red {
+      background-color: red;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+ <h1>Home</h1>
+
+<br><br><br><br>
+<div class="buttons">
+    <button id="colorFirst">Color 1st Row Red</button>
+    <button id="colorLast">Color Last Row Red</button>
+    <button id="reset">Reset Colors in Rows</button>
+  </div>
+  
+
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>C1</th>
+        <th>C2</th>
+        <th>C3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R 1, C 1</td>
+        <td>R 1, C 2</td>
+        <td>R 1, C 3</td>
+      </tr>
+      <tr>
+        <td>R 2, C 1</td>
+        <td>R 2, C 2</td>
+        <td>R 2, C 3</td>
+      </tr>
+      <tr>
+        <td>R 3, C 1</td>
+        <td>R 3, C 2</td>
+        <td>R 3, C 3</td>
+      </tr>
+      <tr>
+        <td>R 4, C 1</td>
+        <td>R 4, C 2</td>
+        <td>R 4, C 3</td>
+      </tr>
+    </tbody>
+    
+  </table>
+  
+  <script>
+  const firstRow = document.querySelector("tbody tr:first-child");
+  const lastRow = document.querySelector("tbody tr:last-child");
+  const colorFirstBtn = document.querySelector("#colorFirst");
+  const colorLastBtn = document.querySelector("#colorLast");
+    const resetBtn = document.querySelector("#reset");
+
+    colorFirstBtn.addEventListener("click", () => {
+      firstRow.classList.add("red");
+    });
+
+    colorLastBtn.addEventListener("click", () => {
+      lastRow.classList.add("red");
+    });
+
+    resetBtn.addEventListener("click", () => {
+      firstRow.classList.remove("red");
+      lastRow.classList.remove("red");
+    });
+    
+  </script>
+
+</body>
+</html>

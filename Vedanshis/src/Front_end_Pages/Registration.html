@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <body>
+    <h1>Registration Page</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="#" id="login-link">Login</a>
+    <br>
+    <br>
+    <a href="#" id="terms-link">Terms and Privacy policy</a>
+  </body>
+  <script>
+    document.getElementById("login-link").addEventListener("click", function() {
+      // code to open the login page
+    });
+    document.getElementById("terms-link").addEventListener("click", function() {
+      // code to open the same (following) Register page
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+
+      .center-form {
+        width: 250px;
+        margin: auto;
+        padding: 70px;
+        text-align: center;
+        border: 3px solid gray;
+        border-radius: 10px;
+      }
+      input[type="submit"] {
+        background-color: blue;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;}
+    </style>
+</head>
+<body>
+<div class="center-form">
+<p> <a href="Registration_Page.html">Create an account</a></p>
+      <h1>Login Form</h1>
+       <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login" onclick="checkCredentials()">
+      
+      
+      <p><a href="forget.html">Forget Password?</a></p>
+    </div>
+   
+
+    <script>
+      function checkCredentials() {
+    	     email = document.getElementById("email").value;
+             password = document.getElementById("password").value;
+        if (
+          (email == "hello@test.com" && password == "test") ||
+          (email == "john.doe@test.com" && password == "hello") ||
+          (email == "john.doe@test.com" && password ==  "john")
+        ) {
+          window.location.href = "table1.html";
+          }
+         else {
+          alert("Invalid email or password");
+          
+        }}
+  </script>
+   
+</body>
+
+</html>

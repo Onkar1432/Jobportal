@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+ <head>
+ <title>registration page</title>
+    <style>
+      .center-form {
+        width: 300px;
+        margin: auto;
+        padding: 30px;
+        text-align: center;
+        border: 2px solid gray;
+        border-radius: 20px;
+      }
+       
+      input[type="submit"] {
+        background-color: blue;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-form">
+      <h1>Register</h1>
+      <form action="Login.html">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required="required"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"required="required"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required="required"><br><br>
+        <label for="confirmpassword">Confirm Password:</label><br>
+        <input type="password" id="confirmpassword" name="confirmpassword" required="required"><br><br>
+        <input type="checkbox" id="terms" name="terms" required="required">
+        <label for="terms">I accept the terms and conditions</label><br><br>
+        <input type="submit" value="Register">
+      </form>
+      <p> have an account? <a href="Login.html">Login</a></p>
+    </div>
+    </html>

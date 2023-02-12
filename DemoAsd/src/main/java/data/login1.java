@@ -1,4 +1,4 @@
-package data;
+ package data;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,7 +39,7 @@ public class login1 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("username");
@@ -50,6 +50,7 @@ public class login1 extends HttpServlet {
 	
 		RequestDispatcher RD = request.getRequestDispatcher("registration.jsp");
 		RD.forward(request, response);
+		//out.println("done");
 		
 		
 	}
@@ -58,7 +59,7 @@ public class login1 extends HttpServlet {
 		
 		RequestDispatcher RD = request.getRequestDispatcher("404.html");
 		RD.include(request, response);
-		
+		out.println("error");
 				
 	}
 	
